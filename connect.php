@@ -4,12 +4,15 @@ $username = "root";
 $password = "";
 $dbname = "daln";
 
+
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=daln", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
+    // Tạo kết nối PDO
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // Thiết lập chế độ lỗi PDO thành Exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo ""; 
 } catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+    echo "Kết nối thất bại: " . $e->getMessage();
 }
 ?>
+
