@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "daln";
+$dbname = "quiz_db";
 
 
 try {
@@ -14,5 +14,6 @@ try {
 } catch(PDOException $e) {
     echo "Kết nối thất bại: " . $e->getMessage();
 }
+
 ?>
 

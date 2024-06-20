@@ -8,7 +8,7 @@ try {
     $option_d = $_POST['option_d'];
     $answer = $_POST['answer'];
 
-    $sql = "insert into cauhoi(question, option_a, option_b, option_c, option_d, answer)";
+    $sql = "insert into questions(question_text, option_a, option_b, option_c, option_d, correct_answer)";
     $sql = $sql."value('".$question."', '".$option_a."', '".$option_b."', '".$option_c."', '".$option_d."', '".$answer."')";
 
     if ($conn->query($sql) == TRUE) {
